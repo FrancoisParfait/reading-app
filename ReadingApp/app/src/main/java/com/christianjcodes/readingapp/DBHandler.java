@@ -8,6 +8,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "userdb";
     private static final int DB_VERSION = 1;
+    private static final String TABLE_NAME = "userdata";
     public DBHandler(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -18,6 +19,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
 }
