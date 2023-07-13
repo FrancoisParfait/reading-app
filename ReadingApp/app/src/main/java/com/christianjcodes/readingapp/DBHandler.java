@@ -8,7 +8,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "userdb";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "userdata";
+    private static final String TABLE_NAME = "users";
     public DBHandler(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
