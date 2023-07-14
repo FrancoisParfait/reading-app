@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="@color/black"
-        android:text="Hello! Please sign in or register below:" />
+        android:text="Hello! Please register below:" />
 
     <EditText
         android:id="@+id/username"
@@ -40,6 +40,32 @@
         android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/password"/>
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/repassword"/>
+
+    <TextView
+        android:id="@+id/existinguser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/signupbtn"
+        android:textColor="@color/black"
+        android:text="Existing user? Please sign in:"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/signinbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/signupbtn"/>
 
 
 
