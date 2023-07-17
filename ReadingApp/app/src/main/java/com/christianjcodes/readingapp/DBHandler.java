@@ -29,5 +29,12 @@ public class DBHandler extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
+        long result = MyDB.insert(TABLE_NAME, null, contentValues);
+        
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
