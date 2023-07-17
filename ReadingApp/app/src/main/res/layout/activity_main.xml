@@ -20,7 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="User Name"
-        android:gravity="center"
         android:layout_marginTop="50dp"/>
 
     <EditText
@@ -28,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/username"/>
 
@@ -37,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Re-Type Password"
-        android:gravity="center"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/password"/>
 
