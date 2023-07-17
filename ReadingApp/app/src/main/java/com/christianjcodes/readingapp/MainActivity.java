@@ -2,6 +2,7 @@ package com.christianjcodes.readingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText username, password, repassword;
     Button signup, signin;
+    DBHandler DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         repassword = (EditText) findViewById(R.id.repassword);
         signup = (Button) findViewById(R.id.signupbtn);
         signin = (Button) findViewById(R.id.signinbtn);
+        DB = new DBHandler(this);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 
