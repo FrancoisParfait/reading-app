@@ -48,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             Toast.makeText(MainActivity.this, "Registration failed.", Toast.LENGTH_SHORT).show();
                         }
+                    } else {
+                        Toast.makeText(MainActivity.this, "User already exists! Please sign in.", Toast.LENGTH_SHORT).show();
                     }
+                } else {
+                    Toast.makeText(MainActivity.this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
