@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".LoginActivity">
 
     <EditText
@@ -24,7 +25,7 @@
         android:layout_below="@+id/username1"/>
 
     <Button
-        android:id="@+id/signinbtn"
+        android:id="@+id/signinbtn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign In"
