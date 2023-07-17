@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+                String repass = repassword.getText().toString();
+                
+                if (user.equals("") || pass.equals("") || repass.equals("")) {
+                    Toast.makeText(MainActivity.this, "Please fill out all the fields!", Toast.LENGTH_SHORT).show();
+                } else if (pass.equals(repass)) {
+                    Boolean checkUser = DB.checkUsername(user);
+                    if (!checkUser) {
+                        Boolean insert = DB.insertData(user, pass);
+                        if (insert) {
+                            Toast.makeText(MainActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
             }
         });
 
