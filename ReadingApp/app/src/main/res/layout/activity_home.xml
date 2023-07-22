@@ -19,6 +19,15 @@
             android:layout_margin="16dp"
             android:layout_height="200dp"
             card_view:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="My Dashboard"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
