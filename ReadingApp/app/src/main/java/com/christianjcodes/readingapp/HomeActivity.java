@@ -48,5 +48,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        readingList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ReadingListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
