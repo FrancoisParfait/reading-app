@@ -34,6 +34,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/current_reads"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="16dp"
@@ -51,6 +53,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/completed_reads"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="16dp"
@@ -68,6 +72,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/reading_list"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="16dp"
