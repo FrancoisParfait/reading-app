@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     var repassword: EditText? = null
     var signup: Button? = null
     var signin: Button? = null
-    var DB: DBHandler? = null
+    var dB: DBHandler? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         repassword = findViewById<View>(R.id.repassword) as EditText
         signup = findViewById<View>(R.id.signupbtn) as Button
         signin = findViewById<View>(R.id.signinbtn) as Button
-        DB = DBHandler(this)
+        dB = DBHandler(this)
 
         signup!!.setOnClickListener {
             val user = username!!.text.toString()
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
             if (user == "" || pass == "" || repass == "") {
                 Toast.makeText(this@MainActivity, "Please fill out all the fields!", Toast.LENGTH_SHORT).show()
             } else if (pass == repass) {
-                val checkUser = DB!!.checkUsername(user)
+                val checkUser = dB!!.checkUsername(user)
                 if (!checkUser) {
-                    val insert = DB!!.insertData(user, pass)
+                    val insert = dB!!.insertData(user, pass)
                     if (insert) {
                         Toast.makeText(this@MainActivity, "Registration successful!", Toast.LENGTH_SHORT).show()
                         val intent = Intent(applicationContext, HomeActivity::class.java)
